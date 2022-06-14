@@ -12,7 +12,7 @@ namespace Junior.CSharp.Test
 		{
 			SecondTask secondTask = new SecondTask();
 			Assert.AreEqual(true, secondTask.IsHappy(19));
-			//Assert.AreEqual(false, secondTask.IsHappy(2));
+			Assert.AreEqual(false, secondTask.IsHappy(2));
 		}
 	}
 }

@@ -6,7 +6,7 @@ namespace Junior.CSharp.Test
 	public class ThirdTaskTest
 	{
 		[TestMethod]
-		public void IsHappyTest()
+		public void DivideTest()
 		{
 			ThirdTask task = new ThirdTask();	
 			Assert.AreEqual(3, task.Divide(10,3));
