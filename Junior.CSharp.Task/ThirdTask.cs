@@ -10,7 +10,6 @@ namespace Junior.CSharp.Task
 	{
 		public int Divide(int divident, int divisior)
 		{
-
 			int sing = 1;
 			if (divident * divisior < 0)
 			{
@@ -21,22 +20,38 @@ namespace Junior.CSharp.Task
 
 			divident = Math.Abs(divident);
 			divisior = Math.Abs(divisior);
-			if (divisior != 0 && int.MinValue <= divident && divisior <= int.MaxValue)
+
+			if (divisior == 0)
 			{
-				while (divident >= divisior)
-				{
-					divident = divident - divisior;
-					quotient++;
-				}
-				if (quotient > int.MaxValue)
-				{
-					return int.MaxValue;
-				}
-				else if (quotient < int.MinValue)
-				{
-					return int.MinValue;
-				}
+				throw new Exception("Divisior can not be zero");
 			}
+
+			if (divident < int.MinValue || divident > int.MaxValue)
+			{
+				throw new Exception("Divided is not in the range of values");
+			}
+
+			if (divisior < int.MinValue || divisior > int.MaxValue)
+			{
+				throw new Exception("Divided is not in the range of values");
+			}
+
+			while (divident >= divisior)
+			{
+				divident = divident - divisior;
+				quotient++;
+			}
+
+			if (quotient > int.MaxValue)
+			{
+				return int.MaxValue;
+			}
+
+			else if (quotient < int.MinValue)
+			{
+				return int.MinValue;
+			}
+
 			return sing * quotient;
 		}
 	}

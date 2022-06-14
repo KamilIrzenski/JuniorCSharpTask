@@ -15,9 +15,11 @@ namespace Junior.CSharp.Task
 				throw new Exception("The number n is not in the range");
 			}
 			List<int> listOfResults = new List<int>();
+
 			while (n != 1)
 			{
 				List<int> listOfInsts = new List<int>();
+
 				while (n > 0)
 				{
 					listOfInsts.Add(n % 10);
@@ -30,6 +32,7 @@ namespace Junior.CSharp.Task
 				{
 					n += (int)Math.Pow(tab[i], 2);
 				}
+
 				if (listOfResults.Contains(n))
 				{
 					return false;
