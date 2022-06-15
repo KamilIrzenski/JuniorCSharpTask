@@ -10,15 +10,7 @@ namespace Junior.CSharp.Task
 	{
 		public int ThreeSumClosest(int[] nums, int target)
 		{
-			int result = 0;
-			for (int i = 0; i < nums.Length; i++)
-			{
-				if (nums[i] == target)
-				{
-					result = nums[i] + nums[--i];
-				}
-			}
-			return result;
+			return 0; 
 		}
 	}
 }
